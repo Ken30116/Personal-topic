@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-family.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .c-video {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        .controls {
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0%;
+            background-color: rgba(0, 128, 128, 0.5);
+            transform: translateY(100%) translateY(-5px);
+            transition: transform .5s;
+        }
+
+        .c-video:hover .controls {
+            transform: translateY(0);
+        }
+
+        .green-bar {
+            height: 10px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+        }
+
+        .green-juice {
+            height: 10px;
+            background-color: #008080;
+        }
+
+        .buttons {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        #play-pause {
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #play-pause::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.7);
+            display: inline-block;
+        }
+
+        .play::after {
+            content: "";
+            width: 35px;
+            height: 35px;
+            clip-path: polygon(0 0, 0 100%, 100% 50%);
+            background-color: #ffffff;
+            opacity: .7;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 55%;
+        }
+
+        .pause::after {
+            content: "";
+            width: 10px;
+            height: 35px;
+            border-right: 10px solid #ffffff;
+            border-left: 10px solid #ffffff;
+            background-color: transparent;
+            opacity: .7;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        #play-pause:hover::before {
+            box-shadow: 5px 5px 8px #00c234;
+
+            opacity: 1;
+        }
+
+        .play:hover::after {
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+        }
+
+        .pause:hover::after {
+            width: 12px;
+            height: 42px;
+            border-right: 12px solid #ffffff;
+            border-left: 12px solid #ffffff;
+            opacity: 1;
+        }
+
+        .play-text {
+            text-align: center;
+            margin: auto 20px;
+        }
+
+        .play-text span {
+            color: #ffffff;
+            font-family: "華康墨字體";
+            font-size: 40px;
+            opacity: .7;
+        }
+
+        .play-text p {
+            color: #ffffff;
+            font-family: "華康墨字體";
+            font-size: 20px;
+            opacity: .7;
+            margin-top: 5px;
+        }
+
+        .video-text {
+            width: 30%;
+            height: 65%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 128, 128, 0.7);
+            border-radius: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .video-text h1 {
+            padding-bottom: 10px;
+            color: #ffffff;
+            font-family: "華康墨字體";
+            font-size: 40px;
+            text-align: center;
+            opacity: .9;
+
+        }
+
+        .video-text span {
+            font-size: 30px;
+        }
+
+        .video-text p {
+            color: #ffffff;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            text-align: justify;
+            opacity: .6;
+            line-height: 24px;
+            letter-spacing: 1px;
+            padding: 0px 50px 5px 50px;
+        }
+
+        article {
+            overflow: hidden;
+        }
+
+        .theme {
+            position: relative;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top :10px;
+            left:10%;
+        }
+
+        .breadcrumb-item {
+            color: #000000;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            content: " / ";
+        }
+
+        .main {
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .main-box {
+            width: 50%;
+            margin: 20px 50px 20px 50px;
+            padding-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.35);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .main-box h2 {
+            padding-bottom: 5px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #000000;
+            font-family: "華康墨字體";
+            font-size: 40px;
+            opacity: .9;
+            display: inline-block;
+            border-bottom: 5px solid #00b7e4;
+        }
+
+        .text-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 10px 0px;
+        }
+
+        .text-box:nth-of-type(1)~.text-box::before {
+            content: "";
+            width: 95%;
+            height: 2px;
+            margin-bottom: 15px;
+            background: repeating-linear-gradient(90deg, #00b7e4 0, #00b7e4 3%, transparent 3%, transparent 4%);
+            opacity: .7;
+        }
+
+        .text-box p {
+            color: #000000;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+            line-height: 24px;
+            letter-spacing: 1px;
+        }
+
+        .text-box-left p {
+            text-align: center;
+        }
+
+        .text-box-right p {
+            text-align: justify;
+            text-indent: 35px;
+            padding: 0px 20px;
+        }
+
+        .text-box-left {
+            width: 25%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .text-box-right {
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .button {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .button a {
+            color: #ffffff;
+            font-family: "華康墨字體";
+            font-size: 30px;
+            padding: 10px;
+            background-color: rgba(0, 128, 128, 0.7);
+            border-radius: 10px;
+        }
+
+        .button a:hover {
+            background-color: #00c234;
+        }
+
+        .main_img {
+            position: absolute;
+            top:20%;
+            right: 0;
+            z-index: -1;
+        }
+
+        .main_img img {
+            width: 100%;
+            opacity: .8;
+        }
+
+        .main_imgbox {
+            width: 400px;
+            position: absolute;
+            top:30%;
+            right:20%;
+            z-index: -1;
+        }
+
+        .main_imgbox h3 {
+            color: #000000;
+            font-family: "華康墨字體";
+            font-size: 40px;
+            opacity: .9;
+            position: absolute;
+            bottom: 100%;
+            right: 0%;
+        }
+
+        .main_imgbox p {
+            color: #000000;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+            line-height: 24px;
+            letter-spacing: 1px;
+            text-align: justify;
+            text-indent: 35px;
+            position: absolute;
+            bottom: -30px;
+            right: -60%;
+        }
+
+        .first-topic {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .first-topic-text {
+            width: 1280px;
+            height: 800px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .first-topic-text-box {
+            width: 50%;
+            margin-left: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .first-topic-text-box h2 {
+            color: #ffffff;
+            font-family: "華康墨字體";
+            font-size: 40px;
+            text-align: center;
+            opacity: .9;
+            display: inline-flex;
+            border-bottom: 5px solid #00b7e4;
+            padding-bottom: 5px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .first-topic-text-box p {
+            color: #ffffff;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+            line-height: 24px;
+            letter-spacing: 1px;
+            text-align: justify;
+            text-indent: 35px;
+            padding: 0px 20px 10px 20px;
+        }
+
+        .first-topic-text-box span {
+            color: #ffffff;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+            margin-left: 75%;
+        }
+
+        .first-topic-img {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            z-index: -1;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .first-topic-img img {
+            width: 100%;
+        }
+
+        .first-topic-imgbox {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0%;
+            padding-right: 50px;
+            background-color: rgba(0, 183, 228, 0.2);
+        }
+
+
+        .first-topic-imgbox img {
+            height: 100%;
+            opacity: .5;
+        }
+
+        .imgbox-text {
+            font-family: "華康墨字體";
+            font-size: 25px;
+            opacity: .6;
+            position: absolute;
+            color: #ffffff;
+        }
+
+        .imgbox-text:nth-of-type(1) {
+            top: 10%;
+            right: 40%;
+        }
+
+        .imgbox-text:nth-of-type(2) {
+            top: 30%;
+            right: 20%;
+        }
+
+        .imgbox-text:nth-of-type(3) {
+            top: 35%;
+            right: 75%;
+        }
+
+        .imgbox-text:nth-of-type(4) {
+            top: 58%;
+            right: 70%;
+        }
+
+        .imgbox-text:nth-of-type(5) {
+            top: 60%;
+            right: 7%;
+        }
+
+        .imgbox-text:nth-of-type(6) {
+            top: 90%;
+            right: 60%;
+        }
+
+        .imgbox-text:nth-of-type(5)::before {
+            content: "⇙";
+            color: #008080;
+            font-size: 100px;
+            position: absolute;
+            right: 50%;
+            top: 100%;
+        }
+
+        .second-topic {
+            width: 1280px;
+            margin: 0px auto;
+
+        }
+
+        .second-topic-box {
+            margin: 100px 50px 0px 50px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .second-topic-text {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-self: center;
+        }
+
+        .second-topic-text h2 {
+            color: #000000;
+            font-family: "華康墨字體";
+            font-size: 40px;
+            opacity: .9;
+            border-bottom: 5px solid #00b7e4;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .second-topic-text p {
+            color: #000000;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+            line-height: 22px;
+            letter-spacing: 1px;
+            text-align: justify;
+            text-indent: 35px;
+            margin-bottom: 10px;
+        }
+
+        .second-topic-img {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .second-topic-img-box {
+            width: 100%;
+            display: flex;
+            margin: 0px 50px;
+            overflow: hidden;
+            transform: skew(10deg, 2deg);
+
+        }
+
+        .second-topic-img-box:nth-of-type(1) {
+            border-radius: 3% 3% 0% 0%/ 6% 6% 0% 0%;
+        }
+
+        .second-topic-img-box:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: skew(-10deg, 2deg);
+        }
+
+        .second-topic-img-box:nth-last-of-type(1) {
+            border-radius: 0% 0% 3% 3%/ 0% 0% 6% 6%;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .second-topic-img-box img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .second-topic-img-left {
+            width: 70%;
+        }
+
+        .second-topic-img-right {
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .second-topic-box span {
+            color: #000000;
+            font-family: "華康中圓體";
+            font-size: 16px;
+            opacity: .6;
+            letter-spacing: 1px;
+            padding-top: 20px;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .second-topic-box span::before {
+            content: "";
+            width: 200px;
+            height: 0px;
+            border: 1px solid #00b7e4;
+            margin-right: 10px;
+        }
+
+        .second-topic-box span::after {
+            content: "";
+            width: 200px;
+            height: 0px;
+            border: 1px solid #00b7e4;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <a href="Home.html"><span class="item">首頁</span></a>
+            <a href="Platform.html"><span class="item">交流平台</span></a>
+            <a href="Home.html#new"><span class="item">園區大小事</span></a>
+            <a href="#"><span class="item">旅遊指南</span></a>
+            <a href="Home.html#commodity"><span class="item">文創商品</span></a>
+            <div id="mascot_nav">
+                <img src="./img/All/mascot(1).png" alt="mascot(1)">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="c-video">
+            <video class="video" src="./video/water-theme.mp4"></video>
+            <div class="controls">
+                <div class="green-bar">
+                    <div class="green-juice"></div>
+                </div>
+                <div class="buttons">
+                    <button class="play" id="play-pause"></button>
+                    <div class="play-text">
+                        <span>Play</span>
+                        <p>注意"有聲音"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-text">
+                <h1>水精靈<span>主題區</span></h1>
+                <p>自然聲音設計-噴泉發出水聲。</p>
+                <p>休憩設計-休憩座椅搭配音樂耳機功能，撥放助眠音樂。</p>
+                <p>水流/體設計-水流動新增趣味性，不僅有視覺美感，而且降低氣溫。</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./javascript/theme_video.js"></script>
+
+    <article>
+        <div class="theme">
+            <nav class="breadcrumb">
+                <a class="breadcrumb-item" href="Home.html">首頁</a>
+                <a class="breadcrumb-item" href="Layout.html">園區導覽</a>
+                <a class="breadcrumb-item" href="#">水精靈主題區</a>
+            </nav>
+            <div class="main">
+                <div class="main-box">
+                    <h2>水精靈主題區</h2>
+                    <div class="text-box">
+                        <div class="text-box-left">
+                            <p>意涵</p>
+                            <p>【柔和】</p>
+                        </div>
+                        <div class="text-box-right">
+                            <p>波光粼粼的河水向下緩緩流淌，清涼的河風帶着水草的味道從河麵上吹過，渺渺的天空一片清朗，柔和的陽光投射在水麵上，反射出片片的金光。</p>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="text-box-left">
+                            <p>意涵</p>
+                            <p>【自由)】</p>
+                        </div>
+                        <div class="text-box-right">
+                            <p>在未來的日子裡，我們嚮往並需要確保一個由必要的人類自由構成的世界：言論與表達的自由——在世界上的所有地方。一切人民以自己的方式崇拜他們神祇的自由——在世界上的所有地方。免於匱乏的自由——以世界性的角度來說，可使每一個國家的所有居民享受在和平時期健康生活的經濟基礎——在世界上的所有地方。免於恐懼的自由——以世界性的角度來說，全球的兵力削減以至於任何國家都沒有對其鄰邦進行武力入侵的可能——在世界上的任何地方。</p>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="text-box-left">
+                            <p>主題</p>
+                            <p>【水之聆聽】</p>
+                        </div>
+                        <div class="text-box-right">
+                            <p>水在顫抖，他們的靈魂依舊不朽；水在激湧，他們的精神仍然長存。心泉汩汩，流水潺潺，用心去聆聽，他們的人生流出一汪碧海；側耳去聆聽，他們的理想匯成一灘小溪。</p>
+                            <div class="button"> <a href="Knowledge-nature sounds.html#topic3">知識庫 ﹥</a></div>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="text-box-left">
+                            <p>主題</p>
+                            <p>【都市熱島-水體篇】</p>
+                        </div>
+                        <div class="text-box-right">
+                            <p>水主要降低熱島效應的機制主要來自於表面水分的蒸發作用以潛熱(latent heat)的方式帶走熱能，再加上水體的熱容量(heat capacity)大，導致相同吸熱狀況下水體較其他大部分表面材質而言升溫緩慢等所產生的效果。
+                            </p>
+                            <div class="button"> <a href="Knowledge-heat island.html#topic2">知識庫 ﹥</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_img">
+                    <img src="./img/water-theme/water-introduction.png" alt="water-introduction">
+                </div>
+                <div class="main_imgbox">
+                    <h3>自然聲音設計</h3>
+                    <p>噴泉發出水聲音，轟轟聲可掩飾道路噪音，降低道路噪音帶來的影響。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="first-topic">
+            <div class="first-topic-text">
+                <div class="first-topic-text-box">
+                    <h2>休憩設計</h2>
+                    <p>休憩座椅搭配音樂耳機功能，音樂主要是撥放助眠音樂，增加使用者放鬆。旁種植柳樹，當風吹拂時，發出稀疏聲，體驗自然聲音。
+                    </p>
+                    <p>露天休憩區位於水精靈區，連接庭園造景，景色宜人，暑氣全消，令人流連忘返、心曠神怡。水流動新增趣味性，不僅有視覺美感，而且水面蒸發配合海風，將冷空氣帶到下風處，降低氣溫。水引用木精靈區收集之雨水，循環利用。
+                    </p>
+                    <span>水流/體設計</span>
+                </div>
+            </div>
+            <div class="first-topic-img">
+                <img src="./img/water-theme/rest.jpg" alt="rest">
+            </div>
+            <div class="first-topic-imgbox">
+                <img src="./img/water-theme/water.png" alt="water">
+                <span class="imgbox-text">太陽能板</span>
+                <span class="imgbox-text">音樂</span>
+                <span class="imgbox-text">音樂撥放器</span>
+                <span class="imgbox-text">抽水馬達</span>
+                <span class="imgbox-text">水循環系統</span>
+                <span class="imgbox-text">雨水儲蓄池/水池</span>
+            </div>
+        </div>
+
+        <div class="second-topic">
+            <div class="second-topic-box">
+                <div class="second-topic-text">
+                    <h2>水元素音樂</h2>
+                    <p>水滴，是小量的水體，能以任何形態出現。一支簡單的垂直管狀物體，慢慢流動液體到末端，便形成最容易出現的水滴。當氣態水份遇上冰冷的物體表面，冷凝作用便會發生，過度冷卻水蒸氣，霧化成水滴，結露的現象也是由於冷凝作用的關係。
+                    </p>
+                    <p>池塘又稱池溏，也有地方方言稱為地塘、埤塘、陂塘。池塘是指比湖泊小的水體。界定池塘和湖泊的方法頗有爭議性。一般而言，池塘是小得不需使用船隻而多採竹筏渡過的。另一個定義則是可以讓人在不被水全淹的情況下安全橫過，或者水淺得陽光能夠直達塘底。
+                    </p>
+                    <p>瀑布（waterfall），指河流或溪水經過河床縱斷面的顯著陡坡或懸崖處時，成垂直或近乎垂直地傾瀉而下的水流景象。波浪、波濤是發生在各種水體（海水上的又叫海浪）表面上的表面波，即沿著水與空氣界面間傳行的一種波動，屬於重力波的一種類型。當風吹起時，風所帶來的壓力及摩擦力對海洋表面的平衡態產生擾動，一些能量自風轉移到水上。水能夠自風得到能量是因為兩者間的摩擦力，使得表面粒子以橢圓式運動移動著，這種橢圓式運動是縱波（往覆運動）與橫波（上下運動）所合成。波浪的波動有隨機性；因為海面的風速、風向隨時隨地變化，所以波浪通常是雜亂無章的，其波高、波長和周期都為隨機量。</p>
+                </div>
+                <div class="second-topic-img">
+                    <div class="second-topic-img-box">
+                        <div class="second-topic-img-left">
+                            <img src="./img/water-theme/img1.jpg" alt="img1">
+                        </div>
+                        <div class="second-topic-img-right">
+                            <img src="./img/water-theme/img2.jpg" alt="img2">
+                            <img src="./img/water-theme/img3.jpg" alt="img3">
+                        </div>
+                    </div>
+                    <div class="second-topic-img-box">
+                        <div class="second-topic-img-left">
+                            <img src="./img/water-theme/img4.jpg" alt="img4">
+                        </div>
+                        <div class="second-topic-img-right">
+                            <img src="./img/water-theme/img5.jpg" alt="img5">
+                            <img src="./img/water-theme/img6.jpg" alt="img6">
+                        </div>
+                    </div>
+                    <div class="second-topic-img-box">
+                        <div class="second-topic-img-left">
+                            <img src="./img/water-theme/img7.jpg" alt="img7">
+                        </div>
+                        <div class="second-topic-img-right">
+                            <img src="./img/water-theme/img8.jpg" alt="img8">
+                            <img src="./img/water-theme/img9.jpg" alt="img9">
+                        </div>
+                    </div>
+                </div>
+                <span>打造水元素創意，與水共舞，體驗水世界之巧妙。</span>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-size">
+            <div class="footer-box">
+                <div class="logo"><img src="./img/All/logo.png" alt="logo"></div>
+                <div class="connection">
+                    <p>營業時間: 08:00~22:00<br>
+                        園區地址: 999香吉市美麗區花田一路666號<br>
+                        聯絡電話: 00-123456789<br>
+                        電子信箱: NingYun@mail.com
+                    </p>
+                    <div class="copyright">Copyright © 2021 NingYun all rights reserved.</div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon"><a href="#"><img src="./img/All/fb.png" alt="fb"></a></div>
+                    <div class="icon"><a href="#"><img src="./img/All/ig.png" alt="ig"></a></div>
+                    <div class="icon"><a href="#"><img src="./img/All/line.png" alt="line"></a></div>
+                    <div class="icon"><a href="#"><img src="./img/All/twitter.png" alt="twitter"></a></div>
+                    <div class="icon"><a href="#"><img src="./img/All/youtube.png" alt="youtube"></a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
