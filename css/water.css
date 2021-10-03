@@ -1,0 +1,68 @@
+.main-box h2 {
+    border-bottom: 0.2rem solid #00b7e4;
+}
+
+.text-box:nth-of-type(1)~.text-box::before {
+    background: repeating-linear-gradient(90deg, #00b7e4 0, #00b7e4 3%, transparent 3%, transparent 4%);
+}
+
+.first-topic-text h2 {
+    border-bottom: 0.2rem solid #00b7e4;
+}
+
+.imgbox-text:nth-of-type(1) {
+    top: 18%;
+    right: 40%;
+}
+
+.imgbox-text:nth-of-type(2) {
+    top: 32%;
+    right: 20%;
+}
+
+.imgbox-text:nth-of-type(3) {
+    top: 35%;
+    right: 67%;
+}
+
+.imgbox-text:nth-of-type(4) {
+    top: 55%;
+    right: 67%;
+}
+
+.imgbox-text:nth-of-type(5) {
+    top: 55%;
+    right: 7%;
+}
+
+.imgbox-text:nth-of-type(6) {
+    top: 80%;
+    right: 50%;
+}
+
+.imgbox-text:nth-of-type(5)::before {
+    content: "⇙";
+    color: #008080;
+    font-size: 50px;
+    position: absolute;
+    right: 50%;
+    top: 100%;
+}
+
+.second-topic-text h2 {
+    border-bottom: 0.2rem solid #00b7e4;
+}
+
+.second-topic-box span::before {
+    background-color: #00b7e4;
+}
+
+.second-topic-box span::after {
+    background-color: #00b7e4;
+}
+
+@media screen and (min-width: 768px) {
+    .imgbox-text:nth-of-type(3) {
+        top: 35%;
+    }
+}

@@ -16,7 +16,6 @@ window.onload = function () {
     let second_car = document.getElementsByClassName("second-content-car");
     let thirt_car = document.getElementsByClassName("thirt-content-car");
     let choose = document.getElementsByClassName("choose-text");
-    let choose_bottom = document.getElementsByClassName("choose-bottom-btn");
     let first_top = document.getElementsByClassName("first-top-btn");
     let first_top_t = document.getElementsByClassName("first-top-btn-train");
     let first_top_c = document.getElementsByClassName("first-top-btn-car");
@@ -128,7 +127,14 @@ window.onload = function () {
             }
             this.style.transform = "scale(1.2)";
             this.style.backgroundColor = "rgba(255, 255, 255, 1)";
-            choose_bottom[0].style.display = "block";
+            for (var j = 0; j < 3; j++) {
+                choose[j].style.transform = "scale(1)";
+                choose[j].style.backgroundColor = "rgba(255, 255, 255, .6)";
+            };
+            mascot_1_t[0].style.animation = "mascot_right1 1.5s forwards";
+            first_bottom_t[0].style.display = "block";
+            carimg_1_s1[0].style.animation = "car-right1 3s 1s forwards,car_shock  0.2s infinite";
+            first_bottom_c[0].style.display = "block";
         }
     }
 
@@ -175,18 +181,6 @@ window.onload = function () {
         first_car[0].style.display = "block";
         second_car[0].style.display = "block";
         thirt_car[0].style.display = "block";
-    }
-
-    choose_bottom[0].onclick = function () {
-        for (j = 0; j < 3; j++) {
-            choose[j].style.transform = "scale(1)";
-            choose[j].style.backgroundColor = "rgba(255, 255, 255, .6)";
-            choose_bottom[0].style.display = "none";
-        };
-        mascot_1_t[0].style.animation = "mascot_right1 1.5s forwards";
-        first_bottom_t[0].style.display = "block";
-        carimg_1_s1[0].style.animation = "car-right1 3s 1s forwards,car_shock  0.2s infinite";
-        first_bottom_c[0].style.display = "block";
     }
 
     first_top[0].onclick = function () {

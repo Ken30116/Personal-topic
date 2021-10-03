@@ -1,0 +1,94 @@
+.main-box h2 {
+    border-bottom: 0.2rem solid #46a12b;
+}
+
+.text-box:nth-of-type(1)~.text-box::before {
+    background: repeating-linear-gradient(90deg, #46a12b 0, #46a12b 3%, transparent 3%, transparent 4%);
+}
+
+.first-topic-text h2 {
+    border-bottom: 0.2rem solid #46a12b;
+}
+
+.imgbox-text:nth-of-type(1) {
+    top: 15%;
+    right: 40%;
+}
+
+.imgbox-text:nth-of-type(2) {
+    top: 15%;
+    right: 8%;
+}
+
+.imgbox-text:nth-of-type(3) {
+    top: 35%;
+    right: 70%;
+}
+
+.imgbox-text:nth-of-type(4) {
+    top: 49%;
+    right: 30%;
+}
+
+.imgbox-text:nth-of-type(5) {
+    top: 60%;
+    right: 3%;
+}
+
+.imgbox-text:nth-of-type(6) {
+    top: 83%;
+    right: 58%;
+}
+
+.imgbox-text:nth-of-type(1)::before {
+    content: "↜";
+    color: red;
+    font-size: 50px;
+    position: absolute;
+    transform: rotate(60deg);
+    top: 100%;
+    opacity: .8;
+}
+
+.imgbox-text:nth-of-type(1)::after {
+    content: "↜";
+    color: red;
+    font-size: 50px;
+    position: absolute;
+    transform: rotate(60deg);
+    right: 0%;
+    top: 100%;
+    opacity: .8;
+}
+
+.imgbox-text:nth-of-type(4)::before {
+    content: "⇩";
+    color: #ffffff;
+    font-size: 60px;
+    opacity: .7;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 50%;
+    top: 340%;
+}
+
+.imgbox-text:nth-of-type(5)::before {
+    content: "⇙";
+    color: #007ac3;
+    font-size: 50px;
+    position: absolute;
+    right: 50%;
+    top: 100%;
+}
+
+.second-topic-text h2 {
+    border-bottom: 0.2rem solid #46a12b;
+}
+
+.second-topic-box span::before {
+    background-color: #46a12b;
+}
+
+.second-topic-box span::after {
+    background-color: #46a12b;
+}

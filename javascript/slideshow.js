@@ -1,3 +1,4 @@
+window.onload = function () {
 let img = document.querySelectorAll('.slideshow_img img');
 let span = document.querySelectorAll('.slideshow-selector span');
 let left = document.querySelector('.btn_left');
@@ -153,4 +154,6 @@ function eventList() {
     }, false);
 }
 eventList();
+
+}
 
