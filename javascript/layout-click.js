@@ -1,1 +1,511 @@
-"use strict";window.onload=function(){var e=window.matchMedia("(min-width: 1200px)"),o=window.matchMedia("(min-width: 768px)"),t=window.matchMedia("(min-width: 640px)"),l=document.getElementById("btn_wood"),s=document.getElementById("btn_fire"),n=document.getElementById("btn_terra"),y=document.getElementById("btn_water"),r=document.getElementById("btn_gold"),d=document.getElementById("image_wood"),a=document.getElementById("image_fire"),b=document.getElementById("image_terra"),i=document.getElementById("image_water"),m=document.getElementById("map_gold"),p=document.getElementById("map_wood"),c=document.getElementById("map_fire"),u=document.getElementById("map_terra"),g=document.getElementById("map_water"),x=document.getElementById("text_gold"),f=document.getElementById("text_wood"),h=document.getElementById("text_fire"),w=document.getElementById("text_terra"),k=document.getElementById("text_water");e.matches?(l.onmouseover=function(){p.style.display="block",f.style.display="block",l.style.top="18%",l.style.boxShadow=" 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b",l.style.border="none"},l.onmouseout=function(){p.style.display="none",f.style.display="none",l.style.top="16%",l.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",l.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},d.onmouseover=function(){p.style.display="block",f.style.display="block",l.style.top="18%",l.style.boxShadow=" 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b",l.style.border="none"},d.onmouseout=function(){p.style.display="none",f.style.display="none",l.style.top="16%",l.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",l.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},s.onmouseover=function(){c.style.display="block",h.style.display="block",s.style.top="50%",s.style.boxShadow=" 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000",s.style.border="none"},s.onmouseout=function(){c.style.display="none",h.style.display="none",s.style.top="48%",s.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",s.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},a.onmouseover=function(){c.style.display="block",h.style.display="block",s.style.top="50%",s.style.boxShadow=" 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000",s.style.border="none"},a.onmouseout=function(){c.style.display="none",h.style.display="none",s.style.top="48%",s.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",s.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},n.onmouseover=function(){u.style.display="block",w.style.display="block",n.style.top="66%",n.style.boxShadow=" 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00",n.style.border="none"},n.onmouseout=function(){u.style.display="none",w.style.display="none",n.style.top="64%",n.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",n.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},b.onmouseover=function(){u.style.display="block",w.style.display="block",n.style.top="66%",n.style.boxShadow=" 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00",n.style.border="none"},b.onmouseout=function(){u.style.display="none",w.style.display="none",n.style.top="64%",n.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",n.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},y.onmouseover=function(){g.style.display="block",k.style.display="block",y.style.top="34%",y.style.boxShadow=" 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4",y.style.border="none"},y.onmouseout=function(){g.style.display="none",k.style.display="none",y.style.top="32%",y.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",y.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},i.onmouseover=function(){g.style.display="block",k.style.display="block",y.style.top="34%",y.style.boxShadow=" 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4",y.style.border="none"},i.onmouseout=function(){g.style.display="none",k.style.display="none",y.style.top="32%",y.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",y.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},r.onmouseover=function(){m.style.display="block",x.style.display="block",r.style.top="2%",r.style.boxShadow=" 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909",r.style.border="none"},r.onmouseout=function(){m.style.display="none",x.style.display="none",r.style.top="0%",r.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",r.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},image_gold.onmouseover=function(){m.style.display="block",x.style.display="block",r.style.top="2%",r.style.boxShadow=" 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909",r.style.border="none"},image_gold.onmouseout=function(){m.style.display="none",x.style.display="none",r.style.top="0%",r.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",r.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"}):o.matches?(l.onmouseover=function(){p.style.display="block",f.style.display="block",l.style.top="34%",l.style.boxShadow=" 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b",l.style.border="none"},l.onmouseout=function(){p.style.display="none",f.style.display="none",l.style.top="20%",l.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",l.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},d.onmouseover=function(){p.style.display="block",f.style.display="block",l.style.top="34%",l.style.boxShadow=" 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b",l.style.border="none"},d.onmouseout=function(){p.style.display="none",f.style.display="none",l.style.top="20%",l.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",l.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},s.onmouseover=function(){c.style.display="block",h.style.display="block",s.style.top="34%",s.style.boxShadow=" 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000",s.style.border="none"},s.onmouseout=function(){c.style.display="none",h.style.display="none",s.style.top="20%",s.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",s.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},a.onmouseover=function(){c.style.display="block",h.style.display="block",s.style.top="34%",s.style.boxShadow=" 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000",s.style.border="none"},a.onmouseout=function(){c.style.display="none",h.style.display="none",s.style.top="20%",s.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",s.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},n.onmouseover=function(){u.style.display="block",w.style.display="block",n.style.top="34%",n.style.boxShadow=" 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00",n.style.border="none"},n.onmouseout=function(){u.style.display="none",w.style.display="none",n.style.top="20%",n.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",n.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},b.onmouseover=function(){u.style.display="block",w.style.display="block",n.style.top="34%",n.style.boxShadow=" 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00",n.style.border="none"},b.onmouseout=function(){u.style.display="none",w.style.display="none",n.style.top="20%",n.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",n.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},y.onmouseover=function(){g.style.display="block",k.style.display="block",y.style.top="34%",y.style.boxShadow=" 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4",y.style.border="none"},y.onmouseout=function(){g.style.display="none",k.style.display="none",y.style.top="20%",y.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",y.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},i.onmouseover=function(){g.style.display="block",k.style.display="block",y.style.top="34%",y.style.boxShadow=" 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4",y.style.border="none"},i.onmouseout=function(){g.style.display="none",k.style.display="none",y.style.top="20%",y.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",y.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},r.onmouseover=function(){m.style.display="block",x.style.display="block",r.style.top="34%",r.style.boxShadow=" 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909",r.style.border="none"},r.onmouseout=function(){m.style.display="none",x.style.display="none",r.style.top="20%",r.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",r.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},image_gold.onmouseover=function(){m.style.display="block",x.style.display="block",r.style.top="34%",r.style.boxShadow=" 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909",r.style.border="none"},image_gold.onmouseout=function(){m.style.display="none",x.style.display="none",r.style.top="20%",r.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",r.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"}):t.matches&&(l.ontouchstart=function(){p.style.display="block",f.style.display="block",l.style.top="34%",l.style.boxShadow=" 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b",l.style.border="none"},l.ontouchend=function(){p.style.display="none",f.style.display="none",l.style.top="20%",l.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",l.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},d.ontouchstart=function(){p.style.display="block",f.style.display="block",l.style.top="34%",l.style.boxShadow=" 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b",l.style.border="none"},d.ontouchend=function(){p.style.display="none",f.style.display="none",l.style.top="20%",l.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",l.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},s.ontouchstart=function(){c.style.display="block",h.style.display="block",s.style.top="34%",s.style.boxShadow=" 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000",s.style.border="none"},s.ontouchend=function(){c.style.display="none",h.style.display="none",s.style.top="20%",s.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",s.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},a.ontouchstart=function(){c.style.display="block",h.style.display="block",s.style.top="34%",s.style.boxShadow=" 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000",s.style.border="none"},a.ontouchend=function(){c.style.display="none",h.style.display="none",s.style.top="20%",s.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",s.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},n.ontouchstart=function(){u.style.display="block",w.style.display="block",n.style.top="34%",n.style.boxShadow=" 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00",n.style.border="none"},n.ontouchend=function(){u.style.display="none",w.style.display="none",n.style.top="20%",n.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",n.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},b.ontouchstart=function(){u.style.display="block",w.style.display="block",n.style.top="34%",n.style.boxShadow=" 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00",n.style.border="none"},b.ontouchend=function(){u.style.display="none",w.style.display="none",n.style.top="20%",n.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",n.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},y.ontouchstart=function(){g.style.display="block",k.style.display="block",y.style.top="34%",y.style.boxShadow=" 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4",y.style.border="none"},y.ontouchend=function(){g.style.display="none",k.style.display="none",y.style.top="20%",y.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",y.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},i.ontouchstart=function(){g.style.display="block",k.style.display="block",y.style.top="34%",y.style.boxShadow=" 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4",y.style.border="none"},i.ontouchend=function(){g.style.display="none",k.style.display="none",y.style.top="20%",y.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",y.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},r.ontouchstart=function(){m.style.display="block",x.style.display="block",r.style.top="34%",r.style.boxShadow=" 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909",r.style.border="none"},r.ontouchend=function(){m.style.display="none",x.style.display="none",r.style.top="20%",r.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",r.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"},image_gold.ontouchstart=function(){m.style.display="block",x.style.display="block",r.style.top="34%",r.style.boxShadow=" 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909",r.style.border="none"},image_gold.ontouchend=function(){m.style.display="none",x.style.display="none",r.style.top="20%",r.style.boxShadow=" 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)",r.style.border="0.1rem solid rgba(0, 128, 128, 0.5)"})};
+window.onload = function () {
+    let mb = window.matchMedia("(min-width: 1200px)");
+    let mq = window.matchMedia("(min-width: 768px)");
+    let mt = window.matchMedia("(min-width: 640px)");
+    let btn_wood = document.getElementById("btn_wood");
+    let btn_fire = document.getElementById("btn_fire");
+    let btn_terra = document.getElementById("btn_terra");
+    let btn_water = document.getElementById("btn_water");
+    let btn_gold = document.getElementById("btn_gold");
+    let image_wood = document.getElementById("image_wood");
+    let image_fire = document.getElementById("image_fire");
+    let image_terra = document.getElementById("image_terra");
+    let image_water = document.getElementById("image_water");
+    let map_gold = document.getElementById("map_gold");
+    let map_wood = document.getElementById("map_wood");
+    let map_fire = document.getElementById("map_fire");
+    let map_terra = document.getElementById("map_terra");
+    let map_water = document.getElementById("map_water");
+    let text_gold = document.getElementById("text_gold");
+    let text_wood = document.getElementById("text_wood");
+    let text_fire = document.getElementById("text_fire");
+    let text_terra = document.getElementById("text_terra");
+    let text_water = document.getElementById("text_water");
+
+
+
+
+    if (mb.matches) {
+
+        btn_wood.onmouseover = function () {
+            map_wood.style.display = "block";
+            text_wood.style.display = "block";
+            btn_wood.style.top = "18%";
+            btn_wood.style.boxShadow = " 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b";
+            btn_wood.style.border = "none";
+        };
+
+        btn_wood.onmouseout = function () {
+            map_wood.style.display = "none";
+            text_wood.style.display = "none";
+            btn_wood.style.top = "16%";
+            btn_wood.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_wood.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_wood.onmouseover = function () {
+            map_wood.style.display = "block";
+            text_wood.style.display = "block";
+            btn_wood.style.top = "18%";
+            btn_wood.style.boxShadow = " 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b";
+            btn_wood.style.border = "none";
+        };
+
+        image_wood.onmouseout = function () {
+            map_wood.style.display = "none";
+            text_wood.style.display = "none";
+            btn_wood.style.top = "16%";
+            btn_wood.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_wood.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_fire.onmouseover = function () {
+            map_fire.style.display = "block";
+            text_fire.style.display = "block";
+            btn_fire.style.top = "50%";
+            btn_fire.style.boxShadow = " 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000";
+            btn_fire.style.border = "none";
+        };
+
+        btn_fire.onmouseout = function () {
+            map_fire.style.display = "none";
+            text_fire.style.display = "none";
+            btn_fire.style.top = "48%";
+            btn_fire.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_fire.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_fire.onmouseover = function () {
+            map_fire.style.display = "block";
+            text_fire.style.display = "block";
+            btn_fire.style.top = "50%";
+            btn_fire.style.boxShadow = " 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000";
+            btn_fire.style.border = "none";
+        };
+
+        image_fire.onmouseout = function () {
+            map_fire.style.display = "none";
+            text_fire.style.display = "none";
+            btn_fire.style.top = "48%";
+            btn_fire.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_fire.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_terra.onmouseover = function () {
+            map_terra.style.display = "block";
+            text_terra.style.display = "block";
+            btn_terra.style.top = "66%";
+            btn_terra.style.boxShadow = " 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00";
+            btn_terra.style.border = "none";
+        };
+
+        btn_terra.onmouseout = function () {
+            map_terra.style.display = "none";
+            text_terra.style.display = "none";
+            btn_terra.style.top = "64%";
+            btn_terra.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_terra.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_terra.onmouseover = function () {
+            map_terra.style.display = "block";
+            text_terra.style.display = "block";
+            btn_terra.style.top = "66%";
+            btn_terra.style.boxShadow = " 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00";
+            btn_terra.style.border = "none";
+        };
+
+        image_terra.onmouseout = function () {
+            map_terra.style.display = "none";
+            text_terra.style.display = "none";
+            btn_terra.style.top = "64%";
+            btn_terra.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_terra.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_water.onmouseover = function () {
+            map_water.style.display = "block";
+            text_water.style.display = "block";
+            btn_water.style.top = "34%";
+            btn_water.style.boxShadow = " 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4";
+            btn_water.style.border = "none";
+        };
+
+        btn_water.onmouseout = function () {
+            map_water.style.display = "none";
+            text_water.style.display = "none";
+            btn_water.style.top = "32%";
+            btn_water.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_water.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_water.onmouseover = function () {
+            map_water.style.display = "block";
+            text_water.style.display = "block";
+            btn_water.style.top = "34%";
+            btn_water.style.boxShadow = " 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4";
+            btn_water.style.border = "none";
+        };
+
+        image_water.onmouseout = function () {
+            map_water.style.display = "none";
+            text_water.style.display = "none";
+            btn_water.style.top = "32%";
+            btn_water.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_water.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_gold.onmouseover = function () {
+            map_gold.style.display = "block";
+            text_gold.style.display = "block";
+            btn_gold.style.top = "2%";
+            btn_gold.style.boxShadow = " 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909";
+            btn_gold.style.border = "none";
+        };
+
+        btn_gold.onmouseout = function () {
+            map_gold.style.display = "none";
+            text_gold.style.display = "none";
+            btn_gold.style.top = "0%";
+            btn_gold.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_gold.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_gold.onmouseover = function () {
+            map_gold.style.display = "block";
+            text_gold.style.display = "block";
+            btn_gold.style.top = "2%";
+            btn_gold.style.boxShadow = " 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909";
+            btn_gold.style.border = "none";
+        };
+
+        image_gold.onmouseout = function () {
+            map_gold.style.display = "none";
+            text_gold.style.display = "none";
+            btn_gold.style.top = "0%";
+            btn_gold.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_gold.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+    } else if (mq.matches) {
+        btn_wood.onmouseover = function () {
+            map_wood.style.display = "block";
+            text_wood.style.display = "block";
+            btn_wood.style.top = "34%";
+            btn_wood.style.boxShadow = " 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b";
+            btn_wood.style.border = "none";
+        };
+
+        btn_wood.onmouseout = function () {
+            map_wood.style.display = "none";
+            text_wood.style.display = "none";
+            btn_wood.style.top = "20%";
+            btn_wood.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_wood.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_wood.onmouseover = function () {
+            map_wood.style.display = "block";
+            text_wood.style.display = "block";
+            btn_wood.style.top = "34%";
+            btn_wood.style.boxShadow = " 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b";
+            btn_wood.style.border = "none";
+        };
+
+        image_wood.onmouseout = function () {
+            map_wood.style.display = "none";
+            text_wood.style.display = "none";
+            btn_wood.style.top = "20%";
+            btn_wood.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_wood.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_fire.onmouseover = function () {
+            map_fire.style.display = "block";
+            text_fire.style.display = "block";
+            btn_fire.style.top = "34%";
+            btn_fire.style.boxShadow = " 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000";
+            btn_fire.style.border = "none";
+        };
+
+        btn_fire.onmouseout = function () {
+            map_fire.style.display = "none";
+            text_fire.style.display = "none";
+            btn_fire.style.top = "20%";
+            btn_fire.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_fire.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_fire.onmouseover = function () {
+            map_fire.style.display = "block";
+            text_fire.style.display = "block";
+            btn_fire.style.top = "34%";
+            btn_fire.style.boxShadow = " 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000";
+            btn_fire.style.border = "none";
+        };
+
+        image_fire.onmouseout = function () {
+            map_fire.style.display = "none";
+            text_fire.style.display = "none";
+            btn_fire.style.top = "20%";
+            btn_fire.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_fire.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_terra.onmouseover = function () {
+            map_terra.style.display = "block";
+            text_terra.style.display = "block";
+            btn_terra.style.top = "34%";
+            btn_terra.style.boxShadow = " 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00";
+            btn_terra.style.border = "none";
+        };
+
+        btn_terra.onmouseout = function () {
+            map_terra.style.display = "none";
+            text_terra.style.display = "none";
+            btn_terra.style.top = "20%";
+            btn_terra.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_terra.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_terra.onmouseover = function () {
+            map_terra.style.display = "block";
+            text_terra.style.display = "block";
+            btn_terra.style.top = "34%";
+            btn_terra.style.boxShadow = " 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00";
+            btn_terra.style.border = "none";
+        };
+
+        image_terra.onmouseout = function () {
+            map_terra.style.display = "none";
+            text_terra.style.display = "none";
+            btn_terra.style.top = "20%";
+            btn_terra.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_terra.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_water.onmouseover = function () {
+            map_water.style.display = "block";
+            text_water.style.display = "block";
+            btn_water.style.top = "34%";
+            btn_water.style.boxShadow = " 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4";
+            btn_water.style.border = "none";
+        };
+
+        btn_water.onmouseout= function () {
+            map_water.style.display = "none";
+            text_water.style.display = "none";
+            btn_water.style.top = "20%";
+            btn_water.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_water.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_water.onmouseover = function () {
+            map_water.style.display = "block";
+            text_water.style.display = "block";
+            btn_water.style.top = "34%";
+            btn_water.style.boxShadow = " 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4";
+            btn_water.style.border = "none";
+        };
+
+        image_water.onmouseout = function () {
+            map_water.style.display = "none";
+            text_water.style.display = "none";
+            btn_water.style.top = "20%";
+            btn_water.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_water.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_gold.onmouseover = function () {
+            map_gold.style.display = "block";
+            text_gold.style.display = "block";
+            btn_gold.style.top = "34%";
+            btn_gold.style.boxShadow = " 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909";
+            btn_gold.style.border = "none";
+        };
+
+        btn_gold.onmouseout = function () {
+            map_gold.style.display = "none";
+            text_gold.style.display = "none";
+            btn_gold.style.top = "20%";
+            btn_gold.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_gold.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_gold.onmouseover = function () {
+            map_gold.style.display = "block";
+            text_gold.style.display = "block";
+            btn_gold.style.top = "34%";
+            btn_gold.style.boxShadow = " 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909";
+            btn_gold.style.border = "none";
+        };
+
+        image_gold.onmouseout = function () {
+            map_gold.style.display = "none";
+            text_gold.style.display = "none";
+            btn_gold.style.top = "20%";
+            btn_gold.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_gold.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+    }else if (mt.matches) {
+        btn_wood.ontouchstart = function () {
+            map_wood.style.display = "block";
+            text_wood.style.display = "block";
+            btn_wood.style.top = "34%";
+            btn_wood.style.boxShadow = " 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b";
+            btn_wood.style.border = "none";
+        };
+
+        btn_wood.ontouchend = function () {
+            map_wood.style.display = "none";
+            text_wood.style.display = "none";
+            btn_wood.style.top = "20%";
+            btn_wood.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_wood.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_wood.ontouchstart = function () {
+            map_wood.style.display = "block";
+            text_wood.style.display = "block";
+            btn_wood.style.top = "34%";
+            btn_wood.style.boxShadow = " 0 0 0.3rem #46a12b, inset 0 0 0.3rem #46a12b";
+            btn_wood.style.border = "none";
+        };
+
+        image_wood.ontouchend = function () {
+            map_wood.style.display = "none";
+            text_wood.style.display = "none";
+            btn_wood.style.top = "20%";
+            btn_wood.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_wood.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_fire.ontouchstart = function () {
+            map_fire.style.display = "block";
+            text_fire.style.display = "block";
+            btn_fire.style.top = "34%";
+            btn_fire.style.boxShadow = " 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000";
+            btn_fire.style.border = "none";
+        };
+
+        btn_fire.ontouchend = function () {
+            map_fire.style.display = "none";
+            text_fire.style.display = "none";
+            btn_fire.style.top = "20%";
+            btn_fire.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_fire.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_fire.ontouchstart = function () {
+            map_fire.style.display = "block";
+            text_fire.style.display = "block";
+            btn_fire.style.top = "34%";
+            btn_fire.style.boxShadow = " 0 0 .3rem #ea0000, inset 0 0 .3rem #ea0000";
+            btn_fire.style.border = "none";
+        };
+
+        image_fire.ontouchend = function () {
+            map_fire.style.display = "none";
+            text_fire.style.display = "none";
+            btn_fire.style.top = "20%";
+            btn_fire.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_fire.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_terra.ontouchstart = function () {
+            map_terra.style.display = "block";
+            text_terra.style.display = "block";
+            btn_terra.style.top = "34%";
+            btn_terra.style.boxShadow = " 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00";
+            btn_terra.style.border = "none";
+        };
+
+        btn_terra.ontouchend = function () {
+            map_terra.style.display = "none";
+            text_terra.style.display = "none";
+            btn_terra.style.top = "20%";
+            btn_terra.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_terra.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_terra.ontouchstart = function () {
+            map_terra.style.display = "block";
+            text_terra.style.display = "block";
+            btn_terra.style.top = "34%";
+            btn_terra.style.boxShadow = " 0 0 0.3rem #d64d00, inset 0 0 .3rem #d64d00";
+            btn_terra.style.border = "none";
+        };
+
+        image_terra.ontouchend = function () {
+            map_terra.style.display = "none";
+            text_terra.style.display = "none";
+            btn_terra.style.top = "20%";
+            btn_terra.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_terra.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_water.ontouchstart = function () {
+            map_water.style.display = "block";
+            text_water.style.display = "block";
+            btn_water.style.top = "34%";
+            btn_water.style.boxShadow = " 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4";
+            btn_water.style.border = "none";
+        };
+
+        btn_water.ontouchend = function () {
+            map_water.style.display = "none";
+            text_water.style.display = "none";
+            btn_water.style.top = "20%";
+            btn_water.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_water.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_water.ontouchstart = function () {
+            map_water.style.display = "block";
+            text_water.style.display = "block";
+            btn_water.style.top = "34%";
+            btn_water.style.boxShadow = " 0 0 0.3rem #00b7e4, inset 0 0 0.3rem #00b7e4";
+            btn_water.style.border = "none";
+        };
+
+        image_water.ontouchend = function () {
+            map_water.style.display = "none";
+            text_water.style.display = "none";
+            btn_water.style.top = "20%";
+            btn_water.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_water.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        btn_gold.ontouchstart = function () {
+            map_gold.style.display = "block";
+            text_gold.style.display = "block";
+            btn_gold.style.top = "34%";
+            btn_gold.style.boxShadow = " 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909";
+            btn_gold.style.border = "none";
+        };
+
+        btn_gold.ontouchend = function () {
+            map_gold.style.display = "none";
+            text_gold.style.display = "none";
+            btn_gold.style.top = "20%";
+            btn_gold.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_gold.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+
+        image_gold.ontouchstart = function () {
+            map_gold.style.display = "block";
+            text_gold.style.display = "block";
+            btn_gold.style.top = "34%";
+            btn_gold.style.boxShadow = " 0 0 0.3rem #ffc909, inset 0 0 0.3rem #ffc909";
+            btn_gold.style.border = "none";
+        };
+
+        image_gold.ontouchend = function () {
+            map_gold.style.display = "none";
+            text_gold.style.display = "none";
+            btn_gold.style.top = "20%";
+            btn_gold.style.boxShadow = " 0px 0.3rem 0.05rem rgba(0, 122, 128, 0.5)";
+            btn_gold.style.border = "0.1rem solid rgba(0, 128, 128, 0.5)";
+        };
+    }
+}
