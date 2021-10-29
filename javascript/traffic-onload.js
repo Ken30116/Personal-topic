@@ -128,7 +128,7 @@ window.onload = function () {
             }
             this.style.transform = "scale(1.2)";
             this.style.backgroundColor = "rgba(255, 255, 255, 1)";
-            choose_bottom[0].style.display = "block";
+            // choose_bottom[0].style.display = "block";
         }
     }
 
@@ -177,17 +177,17 @@ window.onload = function () {
         thirt_car[0].style.display = "block";
     }
 
-    choose_bottom[0].onclick = function () {
-        for (j = 0; j < 3; j++) {
-            choose[j].style.transform = "scale(1)";
-            choose[j].style.backgroundColor = "rgba(255, 255, 255, .6)";
-            choose_bottom[0].style.display = "none";
-        };
-        mascot_1_t[0].style.animation = "mascot_right1 1.5s forwards";
-        first_bottom_t[0].style.display = "block";
-        carimg_1_s1[0].style.animation = "car-right1 3s 1s forwards,car_shock  0.2s infinite";
-        first_bottom_c[0].style.display = "block";
-    }
+    // choose_bottom[0].onclick = function () {
+    //     for (j = 0; j < 3; j++) {
+    //         choose[j].style.transform = "scale(1)";
+    //         choose[j].style.backgroundColor = "rgba(255, 255, 255, .6)";
+    //         choose_bottom[0].style.display = "none";
+    //     };
+    //     mascot_1_t[0].style.animation = "mascot_right1 1.5s forwards";
+    //     first_bottom_t[0].style.display = "block";
+    //     carimg_1_s1[0].style.animation = "car-right1 3s 1s forwards,car_shock  0.2s infinite";
+    //     first_bottom_c[0].style.display = "block";
+    // }
 
     first_top[0].onclick = function () {
         first_bakimg[0].style.animation = "btn_infinite2 1.5s infinite";
