@@ -8,6 +8,7 @@ $(function () {
     });
     $('#cancel').click(function (){
         $('#user-text').val('');
+        $('#name').val('匿名');
     });
     $('#send').click(function () {
         let name = $('#name').val();
@@ -24,6 +25,7 @@ $(function () {
     </div>
     <div class="reply-result"></div>`);
     $('#user-text').val('');
+    $('#name').val('匿名');
 
 
         $('.reply').click(function () {
