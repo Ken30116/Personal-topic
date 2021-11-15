@@ -6,6 +6,9 @@ $(function () {
             $(this).attr("src", "./img/platform_no1/great-black.png").attr("alt", "great-black");
         }
     });
+    $('#cancel').click(function (){
+        $('#user-text').val('');
+    });
     $('#send').click(function () {
         let name = $('#name').val();
         let user_text = $('#user-text').val();
@@ -20,6 +23,7 @@ $(function () {
     </div>
     </div>
     <div class="reply-result"></div>`);
+    $('#user-text').val('');
 
 
         $('.reply').click(function () {
